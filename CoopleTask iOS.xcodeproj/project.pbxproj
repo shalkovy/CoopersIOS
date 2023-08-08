@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		DBF080542A825EAA00691B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080532A825EAA00691B1B /* AppDelegate.swift */; };
 		DBF080562A825EAA00691B1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080552A825EAA00691B1B /* SceneDelegate.swift */; };
-		DBF080582A825EAA00691B1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080572A825EAA00691B1B /* ViewController.swift */; };
-		DBF0805B2A825EAA00691B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF080592A825EAA00691B1B /* Main.storyboard */; };
 		DBF0805D2A825EAB00691B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF0805C2A825EAB00691B1B /* Assets.xcassets */; };
 		DBF080602A825EAB00691B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF0805E2A825EAB00691B1B /* LaunchScreen.storyboard */; };
+		DBF080682A825EEB00691B1B /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080672A825EEB00691B1B /* JobListViewController.swift */; };
+		DBF0806A2A82601500691B1B /* JobListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080692A82601500691B1B /* JobListPresenter.swift */; };
+		DBF0806C2A82610400691B1B /* JobListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0806B2A82610400691B1B /* JobListInteractor.swift */; };
+		DBF0806E2A8261FC00691B1B /* JobListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */; };
+		DBF080702A8263D800691B1B /* JobItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0806F2A8263D800691B1B /* JobItem.swift */; };
+		DBF080722A8265AD00691B1B /* JobLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080712A8265AD00691B1B /* JobLocation.swift */; };
+		DBF080742A82753400691B1B /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080732A82753400691B1B /* JobService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBF080502A825EAA00691B1B /* CoopleTask iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoopleTask iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF080532A825EAA00691B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBF080552A825EAA00691B1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBF080572A825EAA00691B1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBF0805A2A825EAA00691B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBF0805C2A825EAB00691B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF0805F2A825EAB00691B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBF080612A825EAB00691B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBF080672A825EEB00691B1B /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		DBF080692A82601500691B1B /* JobListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListPresenter.swift; sourceTree = "<group>"; };
+		DBF0806B2A82610400691B1B /* JobListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListInteractor.swift; sourceTree = "<group>"; };
+		DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListConfigurator.swift; sourceTree = "<group>"; };
+		DBF0806F2A8263D800691B1B /* JobItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItem.swift; sourceTree = "<group>"; };
+		DBF080712A8265AD00691B1B /* JobLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLocation.swift; sourceTree = "<group>"; };
+		DBF080732A82753400691B1B /* JobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,44 @@
 		DBF080522A825EAA00691B1B /* CoopleTask iOS */ = {
 			isa = PBXGroup;
 			children = (
-				DBF080532A825EAA00691B1B /* AppDelegate.swift */,
-				DBF080552A825EAA00691B1B /* SceneDelegate.swift */,
-				DBF080572A825EAA00691B1B /* ViewController.swift */,
-				DBF080592A825EAA00691B1B /* Main.storyboard */,
+				DBF080752A82759D00691B1B /* App */,
+				DBF080762A8275BC00691B1B /* JobListModule */,
+				DBF080772A8275D300691B1B /* Models */,
 				DBF0805C2A825EAB00691B1B /* Assets.xcassets */,
 				DBF0805E2A825EAB00691B1B /* LaunchScreen.storyboard */,
 				DBF080612A825EAB00691B1B /* Info.plist */,
 			);
 			path = "CoopleTask iOS";
+			sourceTree = "<group>";
+		};
+		DBF080752A82759D00691B1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DBF080532A825EAA00691B1B /* AppDelegate.swift */,
+				DBF080552A825EAA00691B1B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DBF080762A8275BC00691B1B /* JobListModule */ = {
+			isa = PBXGroup;
+			children = (
+				DBF080672A825EEB00691B1B /* JobListViewController.swift */,
+				DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */,
+				DBF080692A82601500691B1B /* JobListPresenter.swift */,
+				DBF0806B2A82610400691B1B /* JobListInteractor.swift */,
+				DBF080732A82753400691B1B /* JobService.swift */,
+			);
+			path = JobListModule;
+			sourceTree = "<group>";
+		};
+		DBF080772A8275D300691B1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBF0806F2A8263D800691B1B /* JobItem.swift */,
+				DBF080712A8265AD00691B1B /* JobLocation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +166,6 @@
 			files = (
 				DBF080602A825EAB00691B1B /* LaunchScreen.storyboard in Resources */,
 				DBF0805D2A825EAB00691B1B /* Assets.xcassets in Resources */,
-				DBF0805B2A825EAA00691B1B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF080582A825EAA00691B1B /* ViewController.swift in Sources */,
+				DBF080722A8265AD00691B1B /* JobLocation.swift in Sources */,
+				DBF080702A8263D800691B1B /* JobItem.swift in Sources */,
+				DBF0806A2A82601500691B1B /* JobListPresenter.swift in Sources */,
+				DBF080682A825EEB00691B1B /* JobListViewController.swift in Sources */,
+				DBF080742A82753400691B1B /* JobService.swift in Sources */,
+				DBF0806C2A82610400691B1B /* JobListInteractor.swift in Sources */,
 				DBF080542A825EAA00691B1B /* AppDelegate.swift in Sources */,
+				DBF0806E2A8261FC00691B1B /* JobListConfigurator.swift in Sources */,
 				DBF080562A825EAA00691B1B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DBF080592A825EAA00691B1B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBF0805A2A825EAA00691B1B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DBF0805E2A825EAB00691B1B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +328,6 @@
 				INFOPLIST_FILE = "CoopleTask iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.dimashelkov.CoopleTask-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +358,6 @@
 				INFOPLIST_FILE = "CoopleTask iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.dimashelkov.CoopleTask-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
