@@ -102,6 +102,8 @@
 			children = (
 				DBF0806F2A8263D800691B1B /* JobItem.swift */,
 				DBF080712A8265AD00691B1B /* JobLocation.swift */,
+				DBF0807A2A83A16800691B1B /* JobResponse.swift */,
+				DBF0807C2A83C50000691B1B /* DataResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

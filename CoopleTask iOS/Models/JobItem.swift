@@ -25,3 +25,13 @@ struct JobItem: Decodable {
         case location = "jobLocation"
     }
 }
+
+extension JobItem: Hashable {
+    static func == (lhs: JobItem, rhs: JobItem) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
