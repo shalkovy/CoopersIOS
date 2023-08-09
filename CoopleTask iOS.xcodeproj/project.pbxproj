@@ -21,6 +21,8 @@
 		DBF080792A82794900691B1B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080782A82794900691B1B /* URLBuilder.swift */; };
 		DBF0807B2A83A16800691B1B /* JobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807A2A83A16800691B1B /* JobResponse.swift */; };
 		DBF0807D2A83C50000691B1B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807C2A83C50000691B1B /* DataResponse.swift */; };
+		DBF080802A83D84400691B1B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */; };
+		DBF080832A83DC0B00691B1B /* CoopleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080822A83DC0B00691B1B /* CoopleError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DBF080782A82794900691B1B /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		DBF0807A2A83A16800691B1B /* JobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
 		DBF0807C2A83C50000691B1B /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		DBF080822A83DC0B00691B1B /* CoopleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoopleError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				DBF080752A82759D00691B1B /* App */,
 				DBF080762A8275BC00691B1B /* JobListModule */,
 				DBF080772A8275D300691B1B /* Models */,
+				DBF080812A83D84900691B1B /* Extensions */,
+				DBF080842A83DC1C00691B1B /* Error */,
 				DBF0805C2A825EAB00691B1B /* Assets.xcassets */,
 				DBF0805E2A825EAB00691B1B /* LaunchScreen.storyboard */,
 				DBF080612A825EAB00691B1B /* Info.plist */,
