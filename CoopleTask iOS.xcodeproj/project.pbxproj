@@ -23,6 +23,7 @@
 		DBF0807D2A83C50000691B1B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807C2A83C50000691B1B /* DataResponse.swift */; };
 		DBF080802A83D84400691B1B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */; };
 		DBF080832A83DC0B00691B1B /* CoopleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080822A83DC0B00691B1B /* CoopleError.swift */; };
+		DBF080862A83DCC700691B1B /* JobItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080852A83DCC700691B1B /* JobItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		DBF0807C2A83C50000691B1B /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		DBF080822A83DC0B00691B1B /* CoopleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoopleError.swift; sourceTree = "<group>"; };
+		DBF080852A83DCC700691B1B /* JobItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		DBF080762A8275BC00691B1B /* JobListModule */ = {
 			isa = PBXGroup;
 			children = (
+				DBF080872A83EC8900691B1B /* Views */,
 				DBF080672A825EEB00691B1B /* JobListViewController.swift */,
 				DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */,
 				DBF080692A82601500691B1B /* JobListPresenter.swift */,
@@ -143,6 +146,14 @@
 				DBF080822A83DC0B00691B1B /* CoopleError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		DBF080872A83EC8900691B1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBF080852A83DCC700691B1B /* JobItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
