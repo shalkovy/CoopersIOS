@@ -8,6 +8,7 @@
 import UIKit
 
 class JobItemCell: UITableViewCell {
+    static let reuseId = "JobItemCell"
     let jobItemNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0

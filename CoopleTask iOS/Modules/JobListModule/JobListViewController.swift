@@ -11,14 +11,16 @@ import Combine
 protocol JobListViewProtocol: UIViewController {}
 
 class JobListViewController: UIViewController, JobListViewProtocol {
+    enum Section { case main }
+    
     // MARK: - Properties
     
     private let presenter: JobListPresenterProtocol
     private var cancellables: Set<AnyCancellable> = []
     
-    private lazy var dataSource: UITableViewDiffableDataSource<Int, JobItem> = {
-        UITableViewDiffableDataSource<Int, JobItem>(tableView: tableView) { tableView, indexPath, jobItem in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JobItemCell", for: indexPath) as! JobItemCell
+    private lazy var dataSource: UITableViewDiffableDataSource<Section, JobItem> = {
+        UITableViewDiffableDataSource<Section, JobItem>(tableView: tableView) { tableView, indexPath, jobItem in
+            let cell = tableView.dequeueReusableCell(withIdentifier: JobItemCell.reuseId, for: indexPath) as! JobItemCell
             cell.update(with: jobItem)
             return cell
         }
@@ -27,7 +29,7 @@ class JobListViewController: UIViewController, JobListViewProtocol {
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        tableView.register(JobItemCell.self, forCellReuseIdentifier: "JobItemCell")
+        tableView.register(JobItemCell.self, forCellReuseIdentifier: JobItemCell.reuseId)
         tableView.delegate = self
         tableView.tableFooterView = activity
         return tableView
@@ -51,12 +53,16 @@ class JobListViewController: UIViewController, JobListViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewEventSubject.send(.viewDidLoad)
-        subscribeOnJobItems()
-        subsribeOnFetching()
         configureUI()
+        setupSubscriptions()
     }
     
     // MARK: - Private
+    
+    private func setupSubscriptions() {
+        subscribeOnJobItems()
+        subsribeOnFetching()
+    }
     
     private func configureUI() {
         view.addSubview(tableView)
@@ -67,9 +73,6 @@ class JobListViewController: UIViewController, JobListViewProtocol {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
-                    if let error = error as? CoopleError {
-                        self?.showAlert(with: error.description)
-                    }
                     self?.showAlert(with: error.localizedDescription)
                 }
             } receiveValue: { [weak self] items in
@@ -85,9 +88,9 @@ class JobListViewController: UIViewController, JobListViewProtocol {
     }
     
     private func update(with jobItems: [JobItem]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Int, JobItem>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(jobItems, toSection: 0)
+        var snapshot = NSDiffableDataSourceSnapshot<Section, JobItem>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(jobItems, toSection: .main)
         dataSource.apply(snapshot)
     }
     

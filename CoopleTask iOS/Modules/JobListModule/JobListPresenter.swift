@@ -22,33 +22,39 @@ protocol JobListPresenterProtocol {
 final class JobListPresenter: JobListPresenterProtocol {
     let viewEventSubject = PassthroughSubject<JobListViewEvent, Never>()
     let jobItemsSubject = PassthroughSubject<[JobItem], Error>()
-    let isFetchingSubject = PassthroughSubject<Bool, Never>()
+    var isFetchingSubject = PassthroughSubject<Bool, Never>()
     
     private let interactor: JobListInteractorProtocol
-    private var jobItems = [JobItem]() {
-        didSet {
-            jobItemsSubject.send(jobItems)
-        }
-    }
+    private var jobItems = [JobItem]()
     private var cancellables: Set<AnyCancellable> = []
     
     init(interactor: JobListInteractorProtocol) {
         self.interactor = interactor
-        
+        setupSubscriptions()
+    }
+    
+    private func setupSubscriptions() {
         subscribeOnViewEvent()
         subscribeOnJobItems()
+        subscribeOnIsFetching()
+    }
+    
+    private func subscribeOnIsFetching() {
+        interactor.isFetchingSubject
+            .subscribe(isFetchingSubject)
+            .store(in: &cancellables)
     }
     
     private func subscribeOnJobItems() {
         interactor.jobItemsSubject
             .sink { [weak self] completion in
-                self?.isFetchingSubject.send(false)
                 if case .failure(let error) = completion {
                     self?.jobItemsSubject.send(completion: .failure(error))
                 }
             } receiveValue: { [weak self] items in
-                self?.jobItems.append(contentsOf: items)
-                self?.isFetchingSubject.send(false)
+                guard let self else { return }
+                self.jobItems.append(contentsOf: items)
+                self.jobItemsSubject.send(self.jobItems)
             }.store(in: &cancellables)
     }
     
@@ -64,7 +70,6 @@ final class JobListPresenter: JobListPresenterProtocol {
     }
     
     private func fetchJobItems(nextPage: Bool = false) {
-        isFetchingSubject.send(true)
         interactor.fetchJobItems(nextPage: nextPage)
     }
 }
