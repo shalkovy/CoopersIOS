@@ -12,7 +12,6 @@ struct JobListConfigurator {
         let interactor = JobListInteractor()
         let presenter = JobListPresenter(interactor: interactor)
         let controller = JobListViewController(presenter: presenter)
-        presenter.view = controller
         return controller
     }
 }
