@@ -25,7 +25,7 @@ final class JobListInteractor: JobListInteractorProtocol {
     private var isFetching = false
     private var cancellables: Set<AnyCancellable> = []
     
-    init(pageSize: Int = 50, service: JobServiceProtocol = JobService()) {
+    init(pageSize: Int = 50, service: JobServiceProtocol = JobNetworkService()) {
         self.pageSize = pageSize
         self.service = service
     }
@@ -38,6 +38,7 @@ final class JobListInteractor: JobListInteractorProtocol {
         isFetching = true
         if nextPage { pageNum += 1 }
         service.fetchJobItems(pageSize: pageSize, pageNum: pageNum)
+            .map(\.data)
             .map { response in
                 self.total = response.total
                 return response.items

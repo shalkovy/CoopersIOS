@@ -17,12 +17,14 @@
 		DBF0806E2A8261FC00691B1B /* JobListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */; };
 		DBF080702A8263D800691B1B /* JobItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0806F2A8263D800691B1B /* JobItem.swift */; };
 		DBF080722A8265AD00691B1B /* JobLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080712A8265AD00691B1B /* JobLocation.swift */; };
-		DBF080742A82753400691B1B /* JobService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080732A82753400691B1B /* JobService.swift */; };
-		DBF080792A82794900691B1B /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080782A82794900691B1B /* URLBuilder.swift */; };
+		DBF080742A82753400691B1B /* JobNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080732A82753400691B1B /* JobNetworkService.swift */; };
 		DBF0807B2A83A16800691B1B /* JobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807A2A83A16800691B1B /* JobResponse.swift */; };
 		DBF0807D2A83C50000691B1B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807C2A83C50000691B1B /* DataResponse.swift */; };
 		DBF080802A83D84400691B1B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */; };
 		DBF080862A83DCC700691B1B /* JobItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080852A83DCC700691B1B /* JobItemCell.swift */; };
+		DBF0808A2A84653900691B1B /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF080892A84653900691B1B /* NetworkHelper.swift */; };
+		DBF0808C2A84657F00691B1B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0808B2A84657F00691B1B /* Endpoint.swift */; };
+		DBF0808F2A8465EF00691B1B /* CoopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0808E2A8465EF00691B1B /* CoopleEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,12 +40,14 @@
 		DBF0806D2A8261FC00691B1B /* JobListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListConfigurator.swift; sourceTree = "<group>"; };
 		DBF0806F2A8263D800691B1B /* JobItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItem.swift; sourceTree = "<group>"; };
 		DBF080712A8265AD00691B1B /* JobLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLocation.swift; sourceTree = "<group>"; };
-		DBF080732A82753400691B1B /* JobService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobService.swift; sourceTree = "<group>"; };
-		DBF080782A82794900691B1B /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		DBF080732A82753400691B1B /* JobNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobNetworkService.swift; sourceTree = "<group>"; };
 		DBF0807A2A83A16800691B1B /* JobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobResponse.swift; sourceTree = "<group>"; };
 		DBF0807C2A83C50000691B1B /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		DBF0807F2A83D84400691B1B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		DBF080852A83DCC700691B1B /* JobItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobItemCell.swift; sourceTree = "<group>"; };
+		DBF080892A84653900691B1B /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		DBF0808B2A84657F00691B1B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DBF0808E2A8465EF00691B1B /* CoopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoopleEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				DBF080752A82759D00691B1B /* App */,
 				DBF080882A8456F500691B1B /* Modules */,
 				DBF080772A8275D300691B1B /* Models */,
+				DBF0808D2A84658400691B1B /* Protocols */,
 				DBF080812A83D84900691B1B /* Extensions */,
 				DBF0805C2A825EAB00691B1B /* Assets.xcassets */,
 				DBF0805E2A825EAB00691B1B /* LaunchScreen.storyboard */,
@@ -123,8 +128,9 @@
 		DBF0807E2A83D60900691B1B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DBF080732A82753400691B1B /* JobService.swift */,
-				DBF080782A82794900691B1B /* URLBuilder.swift */,
+				DBF080732A82753400691B1B /* JobNetworkService.swift */,
+				DBF080892A84653900691B1B /* NetworkHelper.swift */,
+				DBF0808E2A8465EF00691B1B /* CoopleEndpoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -151,6 +157,14 @@
 				DBF080762A8275BC00691B1B /* JobListModule */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		DBF0808D2A84658400691B1B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBF0808B2A84657F00691B1B /* Endpoint.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,14 +239,16 @@
 			files = (
 				DBF080862A83DCC700691B1B /* JobItemCell.swift in Sources */,
 				DBF080722A8265AD00691B1B /* JobLocation.swift in Sources */,
+				DBF0808F2A8465EF00691B1B /* CoopleEndpoint.swift in Sources */,
 				DBF080802A83D84400691B1B /* UIViewController+Ext.swift in Sources */,
 				DBF080702A8263D800691B1B /* JobItem.swift in Sources */,
+				DBF0808C2A84657F00691B1B /* Endpoint.swift in Sources */,
 				DBF0806A2A82601500691B1B /* JobListPresenter.swift in Sources */,
 				DBF0807B2A83A16800691B1B /* JobResponse.swift in Sources */,
 				DBF080682A825EEB00691B1B /* JobListViewController.swift in Sources */,
-				DBF080742A82753400691B1B /* JobService.swift in Sources */,
-				DBF080792A82794900691B1B /* URLBuilder.swift in Sources */,
+				DBF080742A82753400691B1B /* JobNetworkService.swift in Sources */,
 				DBF0806C2A82610400691B1B /* JobListInteractor.swift in Sources */,
+				DBF0808A2A84653900691B1B /* NetworkHelper.swift in Sources */,
 				DBF080542A825EAA00691B1B /* AppDelegate.swift in Sources */,
 				DBF0806E2A8261FC00691B1B /* JobListConfigurator.swift in Sources */,
 				DBF0807D2A83C50000691B1B /* DataResponse.swift in Sources */,
